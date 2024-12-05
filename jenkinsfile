@@ -18,7 +18,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install the necessary npm dependencies
-                 dir("JenkinsTest/my-react-app/") {   // Here we are going inside the directory which got created using git clone
+                 dir("JenkinsTest/") {   // Here we are going inside the directory which got created using git clone
                      sh 'npm install'
                 }
             }
