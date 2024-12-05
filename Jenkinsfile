@@ -66,10 +66,10 @@ pipeline {
     }
 
     post {
-        always {
-            // Clean up workspace after the build completes
-            cleanWs()
-        }
+        // always {
+        //     // Clean up workspace after the build completes
+        //     cleanWs()
+        // }
 
         success {
             // Notify when the build succeeds (optional)
