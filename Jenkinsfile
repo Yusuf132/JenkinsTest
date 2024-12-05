@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // Install the necessary npm dependencies
                 //  dir("JenkinsTest") {   // Here we are going inside the directory which got created using git clone
-                     sh 'npm install'
+                     echo 'npm install'
                 //}
             }
         }
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 // Build the React application for production
                 script {
-                    sh 'npm run build'
+                    echo 'npm run build'
                 }
             }
         }
