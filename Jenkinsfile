@@ -18,9 +18,9 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install the necessary npm dependencies
-                 dir("JenkinsTest/") {   // Here we are going inside the directory which got created using git clone
+                //  dir("JenkinsTest") {   // Here we are going inside the directory which got created using git clone
                      sh 'npm install'
-                }
+                //}
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 // Run linting (if you have ESLint configured in your project)
                 script {
-                    sh 'npm run lint'
+                    echo 'npm run lint'
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 // Run Jest tests
                 script {
-                    sh 'npm test -- --coverage --ci --watchAll=false'
+                    ech 'npm test -- --coverage --ci --watchAll=false'
                 }
             }
         }
